@@ -47,7 +47,7 @@ export default function Menu() {
           <div className="hidden md:flex ml-8">
             <a
               href="#contacto"
-              className="bg-[#00CFE8] hover:bg-[#009688] text-white font-extrabold rounded-full px-6 py-2 transition-colors shadow-md"
+              className="bg-[#FF6B35] hover:bg-[#FF8C5A] text-white font-extrabold rounded-full px-6 py-2 transition-colors shadow-md"
               onClick={handleContactoClick}
             >
               CONTACTO

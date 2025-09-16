@@ -105,8 +105,8 @@ export default function CarruselPrincipios() {
 						height={260}
 						className="w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[300px] object-cover rounded mb-4"
 					/>
-					<h3 className="text-xl md:text-2xl font-bold text-[#00CFE8] mb-2 uppercase">
-						{current.titulo}
+								<h3 className="text-xl md:text-2xl font-bold text-[#2A2C2E] mb-2 uppercase">
+									{current.titulo}
 					</h3>
 					<p className="text-gray-700 text-base md:text-lg">{current.texto}</p>
 				</div>

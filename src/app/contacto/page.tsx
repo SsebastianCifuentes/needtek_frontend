@@ -10,57 +10,57 @@ export default function ContactoPage() {
         </div>
         {/* Formulario a la derecha */}
         <form
-          className="flex-1 bg-white rounded-2xl shadow-lg p-10 w-full max-w-xl"
+          className="flex-1 bg-[#F5F6F7] rounded-2xl shadow-lg p-10 w-full max-w-xl"
           method="POST"
           action="https://formspree.io/f/mzzaqjdo"
           aria-label="Formulario de contacto"
         >
           <div className="space-y-6">
             <div>
-              <label htmlFor="nombre" className="block text-sm font-bold text-[#0A2540] mb-1">Nombre</label>
+              <label htmlFor="nombre" className="block text-sm font-bold text-[#2A2C2E] mb-1">Nombre</label>
               <input
                 id="nombre"
                 type="text"
                 name="nombre"
                 required
-                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00CFE8]"
+                className="w-full bg-white border border-[#E6EEF2] text-[#2A2C2E] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
                 autoComplete="name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-bold text-[#0A2540] mb-1">Correo</label>
+              <label htmlFor="email" className="block text-sm font-bold text-[#2A2C2E] mb-1">Correo</label>
               <input
                 id="email"
                 type="email"
                 name="email"
                 required
-                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00CFE8]"
+                className="w-full bg-white border border-[#E6EEF2] text-[#2A2C2E] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
                 autoComplete="email"
               />
             </div>
             <div>
-              <label htmlFor="tema" className="block text-sm font-bold text-[#0A2540] mb-1">Tema</label>
+              <label htmlFor="tema" className="block text-sm font-bold text-[#2A2C2E] mb-1">Tema</label>
               <input
                 id="tema"
                 type="text"
                 name="tema"
                 required
-                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00CFE8]"
+                className="w-full bg-white border border-[#E6EEF2] text-[#2A2C2E] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
               />
             </div>
             <div>
-              <label htmlFor="mensaje" className="block text-sm font-bold text-[#0A2540] mb-1">Mensaje</label>
+              <label htmlFor="mensaje" className="block text-sm font-bold text-[#2A2C2E] mb-1">Mensaje</label>
               <textarea
                 id="mensaje"
                 name="mensaje"
                 rows={4}
                 required
-                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00CFE8]"
+                className="w-full bg-white border border-[#E6EEF2] text-[#2A2C2E] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-[#00CFE8] hover:bg-[#009688] text-[#0A2540] font-extrabold rounded-full px-6 py-3 transition-colors shadow-md uppercase duration-200 scale-100 hover:scale-105"
+              className="w-full bg-[#FF6B35] hover:bg-[#FF8C5A] text-white font-extrabold rounded-full px-6 py-3 transition-colors shadow-md uppercase duration-200 scale-100 hover:scale-105"
             >
               Enviar
             </button>

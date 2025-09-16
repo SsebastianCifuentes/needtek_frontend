@@ -1,103 +1,157 @@
+"use client";
 import Image from "next/image";
-
+import { useEffect } from "react";
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const observer = new window.IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fadein-visible");
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll(".animate-fadein").forEach((el) => {
+        observer.observe(el);
+      });
+    }
+  }, []);
+  const handleScrollToContacto = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const contacto = document.getElementById("contacto");
+    if (contacto) {
+      contacto.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <main>
+      {/* HERO SECCIÓN */}
+      <section
+        className="w-full min-h-screen flex flex-col justify-center items-start text-left relative bg-cover bg-center animate-fadein"
+        style={{
+          backgroundImage: "url('/banner/laptop_coding.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 flex flex-col items-start justify-center px-4 md:px-24 py-24 max-w-4xl">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-8 leading-tight drop-shadow-lg uppercase">
+            INNOVANDO Y CONSTRUYENDO EL <span className="text-[#00CFE8]">FUTURO DIGITAL</span>
+          </h1>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contacto"
+            className="inline-block bg-[#00CFE8] hover:bg-[#009688] text-[#0A2540] font-extrabold px-10 py-4 rounded-full text-lg shadow-lg transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            CONVERSEMOS
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      {/* PRINCIPIOS/VALORES */}
+  <section className="w-full bg-[#F5F6F7] py-16 px-4 animate-fadein">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#2A2C2E] mb-12 text-center uppercase tracking-wide">¿Cómo trabajamos?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Propósito */}
+            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-fadein">
+              <Image src="/principios/proposito.jpg" alt="Propósito" width={400} height={160} className="w-full h-40 object-cover rounded mb-4" />
+              <h3 className="text-lg font-bold text-[#00CFE8] mb-2 uppercase">Propósito</h3>
+              <p className="text-gray-700 text-sm">Contribuimos al bienestar de las personas y al desarrollo económico creando un ecosistema de servicios que facilita la innovación en tu organización.</p>
+            </div>
+            {/* Cambios Sistémicos */}
+            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-fadein">
+              <Image src="/principios/cambios.jpg" alt="Cambios Sistémicos" width={400} height={160} className="w-full h-40 object-cover rounded mb-4" />
+              <h3 className="text-lg font-bold text-[#00CFE8] mb-2 uppercase">Cambios Sistémicos</h3>
+              <p className="text-gray-700 text-sm">Analizamos el impacto de cada actor en tu entorno para diseñar soluciones que generen transformaciones sostenibles.</p>
+            </div>
+            {/* Necesidades y Tecnologías */}
+            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-fadein">
+              <Image src="/principios/tecnologias.jpg" alt="Necesidades y Tecnologías" width={400} height={160} className="w-full h-40 object-cover rounded mb-4" />
+              <h3 className="text-lg font-bold text-[#00CFE8] mb-2 uppercase">Necesidades y Tecnologías</h3>
+              <p className="text-gray-700 text-sm">La tecnología es el medio, no el fin: la integramos para impulsar el crecimiento y atender necesidades reales.</p>
+            </div>
+            {/* Diversidad y Multidisciplina */}
+            <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-fadein">
+              <Image src="/principios/diversidad.jpg" alt="Diversidad y Multidisciplina" width={400} height={160} className="w-full h-40 object-cover rounded mb-4" />
+              <h3 className="text-lg font-bold text-[#00CFE8] mb-2 uppercase">Diversidad y Multidisciplina</h3>
+              <p className="text-gray-700 text-sm">Creemos en la diversidad y la colaboración entre disciplinas para comprender la complejidad del mercado actual.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CASOS DE ÉXITO / PROYECTOS */}
+  <section className="w-full bg-[#F5F6F7] py-20 px-4 animate-fadein">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#2A2C2E] mb-6 uppercase tracking-wide">Casos de Éxito / Proyectos</h2>
+          <div className="bg-white rounded-xl shadow-lg p-10 text-gray-500 text-lg font-semibold">Próximamente</div>
+        </div>
+      </section>
+      {/* CTA INTERMEDIO */}
+      <section className="w-full bg-[#F5F6F7] py-8 px-4 animate-fadein">
+        <div className="max-w-3xl mx-auto text-center">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] mb-4">¿Quieres llevar a tu organización al siguiente nivel?</h3>
+          <a
+            href="#contacto"
+            className="inline-block bg-[#00CFE8] hover:bg-[#009688] text-[#0A2540] font-extrabold px-8 py-4 rounded-full text-lg shadow-lg transition-colors uppercase"
+            onClick={handleScrollToContacto}
+          >
+            Agenda una consultoría gratuita
+          </a>
+        </div>
+      </section>
+      {/* SERVICIOS */}
+      <section className="w-full bg-white py-20 px-4 animate-fadein">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#2A2C2E] mb-12 text-center uppercase tracking-wide">Consultoría y Servicios</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Estrategia y Cultura Organizacional */}
+            <div className="bg-[#F5F6F7] rounded-xl shadow-lg p-8 flex flex-col items-center text-center animate-fadein">
+              <Image src="/servicios/estrategia.png" alt="Estrategia y Cultura" width={80} height={80} className="mb-4" />
+              <h3 className="text-lg font-bold text-[#00CFE8] mb-2 uppercase">Estrategia y Cultura Organizacional</h3>
+              <p className="text-gray-700 text-sm">Potencia el liderazgo, la colaboración y la alineación de tu organización con su propósito.</p>
+            </div>
+            {/* Gestión Tecnológica */}
+            <div className="bg-[#F5F6F7] rounded-xl shadow-lg p-8 flex flex-col items-center text-center animate-fadein">
+              <Image src="/servicios/tecnologia.png" alt="Gestión Tecnológica" width={80} height={80} className="mb-4" />
+              <h3 className="text-lg font-bold text-[#00CFE8] mb-2 uppercase">Gestión Tecnológica</h3>
+              <p className="text-gray-700 text-sm">Acompañamos la adopción de tecnologías que habilitan el crecimiento y la eficiencia.</p>
+            </div>
+            {/* Modelos Operativos */}
+            <div className="bg-[#F5F6F7] rounded-xl shadow-lg p-8 flex flex-col items-center text-center animate-fadein">
+              <Image src="/servicios/modelos.png" alt="Modelos Operativos" width={80} height={80} className="mb-4" />
+              <h3 className="text-lg font-bold text-[#00CFE8] mb-2 uppercase">Modelos Operativos</h3>
+              <p className="text-gray-700 text-sm">Diseñamos estructuras más ágiles, digitales y orientadas al cliente.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CONTACTO / FORMULARIO */}
+  <section id="contacto" className="w-full bg-[#0A2540] py-20 px-4 animate-fadein">
+  <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-10 animate-fadein">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] mb-4 text-center uppercase tracking-wide">Hablemos de tu próximo proyecto</h2>
+          <p className="text-gray-700 text-center mb-8">Déjanos tu mensaje y te responderemos lo antes posible.</p>
+          <form action="https://formspree.io/f/tu_form_id" method="POST" className="space-y-6">
+            <div>
+              <label htmlFor="nombre" className="block text-sm font-bold text-[#0A2540] mb-1">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00CFE8]" />
+            </div>
+            <div>
+              <label htmlFor="correo" className="block text-sm font-bold text-[#0A2540] mb-1">Correo</label>
+              <input type="email" id="correo" name="correo" required className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00CFE8]" />
+            </div>
+            <div>
+              <label htmlFor="tema" className="block text-sm font-bold text-[#0A2540] mb-1">Tema</label>
+              <input type="text" id="tema" name="tema" required className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00CFE8]" />
+            </div>
+            <div>
+              <label htmlFor="mensaje" className="block text-sm font-bold text-[#0A2540] mb-1">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows={4} required className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00CFE8]" />
+            </div>
+            <button type="submit" className="w-full bg-[#00CFE8] hover:bg-[#009688] text-[#0A2540] font-extrabold rounded-full px-6 py-3 transition-colors shadow-md uppercase duration-200 scale-100 hover:scale-105">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
   );
 }

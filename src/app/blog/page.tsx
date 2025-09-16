@@ -1,10 +1,27 @@
+
 import { getBlogPosts } from "../../lib/sanity";
-import { PortableText } from "@portabletext/react";
 import { urlFor } from "../../lib/imageUrl";
+import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import type { TypedObject } from "@portabletext/types";
+
+type BlogPost = {
+  _id: string;
+  title: string;
+  mainImage?: {
+    asset?: {
+      _ref?: string;
+      _type?: string;
+    };
+    [key: string]: unknown;
+  };
+  author?: string;
+  body?: TypedObject[];
+  _createdAt: string;
+};
 
 export default async function BlogPage() {
-  const posts = await getBlogPosts();
+  const posts: BlogPost[] = await getBlogPosts();
   return (
     <main className="w-full min-h-screen bg-[#F5F6F7] py-12 px-4 pt-24">
       <h1 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-[#0A2540]">Blog</h1>
@@ -13,7 +30,7 @@ export default async function BlogPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {posts && posts.length > 0 ? (
-          posts.map((post) => (
+          posts.map((post: BlogPost) => (
             <article key={post._id} className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 flex flex-col">
               {post.mainImage && (
                 <div className="mb-4">

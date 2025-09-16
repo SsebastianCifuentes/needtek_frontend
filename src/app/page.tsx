@@ -52,16 +52,9 @@ export default function Home() {
       {/* PRINCIPIOS/VALORES - Carrusel */}
       <section className="w-full bg-[#F5F6F7] py-16 px-4 animate-fadein">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#2A2C2E] mb-8 text-center uppercase tracking-wide">¿Cómo trabajamos?</h2>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] mb-8 text-center uppercase tracking-wide">¿Cómo trabajamos?</h2>
           <CarruselPrincipios />
   </div>
-      </section>
-      {/* CASOS DE ÉXITO / PROYECTOS */}
-      <section className="w-full bg-white py-20 px-4 animate-fadein">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#2A2C2E] mb-8 uppercase tracking-wide">Casos de Éxito</h2>
-          <div className="bg-[#F5F6F7] rounded-xl p-10 text-[#2A2C2E] text-lg font-semibold">Próximamente</div>
-        </div>
       </section>
       {/* CTA INTERMEDIO */}
       <section className="w-full bg-[#0A2540] px-4 pt-8 animate-fadein">
@@ -79,23 +72,29 @@ export default function Home() {
       {/* SERVICIOS */}
       <section className="w-full bg-white py-20 px-4 animate-fadein">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#2A2C2E] mb-12 text-center uppercase tracking-wide">Consultoría y Servicios</h2>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0A2540] mb-12 text-center uppercase tracking-wide">Consultoría y Servicios</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Estrategia y Cultura Organizacional */}
             <div className="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center animate-fadein">
-              <Image src="/servicios/estrategia.png" alt="Estrategia y Cultura" width={80} height={80} className="mb-4" />
+                <div className="flex items-center justify-center mb-4 bg-[#F5F6F7] rounded-full w-20 h-20">
+                <Image src="/servicios/estrategia.png" alt="Estrategia y Cultura" width={48} height={48} style={{filter: 'invert(62%) sepia(98%) saturate(747%) hue-rotate(153deg) brightness(98%) contrast(101%)'}} />
+              </div>
               <h3 className="text-lg font-bold text-[#2A2C2E] mb-2 uppercase">Estrategia y Cultura Organizacional</h3>
               <p className="text-gray-700 text-sm">Potencia el liderazgo, la colaboración y la alineación de tu organización con su propósito.</p>
             </div>
             {/* Gestión Tecnológica */}
             <div className="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center animate-fadein">
-              <Image src="/servicios/tecnologia.png" alt="Gestión Tecnológica" width={80} height={80} className="mb-4" />
+              <div className="flex items-center justify-center mb-4 bg-[#F5F6F7] rounded-full w-20 h-20">
+                <Image src="/servicios/tecnologia.png" alt="Gestión Tecnológica" width={48} height={48} style={{filter: 'invert(62%) sepia(98%) saturate(747%) hue-rotate(153deg) brightness(98%) contrast(101%)'}} />
+              </div>
               <h3 className="text-lg font-bold text-[#2A2C2E] mb-2 uppercase">Gestión Tecnológica</h3>
               <p className="text-gray-700 text-sm">Acompañamos la adopción de tecnologías que habilitan el crecimiento y la eficiencia.</p>
             </div>
             {/* Modelos Operativos */}
             <div className="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center animate-fadein">
-              <Image src="/servicios/modelos.png" alt="Modelos Operativos" width={80} height={80} className="mb-4" />
+                <div className="flex items-center justify-center mb-4 bg-[#F5F6F7] rounded-full w-20 h-20">
+                <Image src="/servicios/modelos.png" alt="Modelos Operativos" width={48} height={48} style={{filter: 'invert(62%) sepia(98%) saturate(747%) hue-rotate(153deg) brightness(98%) contrast(101%)'}} />
+              </div>
               <h3 className="text-lg font-bold text-[#2A2C2E] mb-2 uppercase">Modelos Operativos</h3>
               <p className="text-gray-700 text-sm">Diseñamos estructuras más ágiles, digitales y orientadas al cliente.</p>
             </div>

@@ -65,13 +65,13 @@ export default function Menu() {
         {/* Menú hamburguesa en móvil */}
         {open && (
           <div className="flex md:hidden flex-col absolute top-full left-0 w-full bg-white shadow z-50 items-center py-4">
-            <Link href="/soluciones" className="py-2 text-[#0A2540] font-extrabold text-lg w-full text-center hover:text-[#00CFE8] transition-colors uppercase">SOLUCIONES</Link>
-            <Link href="/nosotros" className="py-2 text-[#0A2540] font-extrabold text-lg w-full text-center hover:text-[#00CFE8] transition-colors uppercase">NOSOTROS</Link>
-            <Link href="/blog" className="py-2 text-[#0A2540] font-extrabold text-lg w-full text-center hover:text-[#00CFE8] transition-colors uppercase">BLOG</Link>
+            <Link href="/soluciones" className="py-2 text-[#0A2540] font-extrabold text-lg w-full text-center hover:text-[#00CFE8] transition-colors uppercase" onClick={() => setOpen(false)}>SOLUCIONES</Link>
+            <Link href="/nosotros" className="py-2 text-[#0A2540] font-extrabold text-lg w-full text-center hover:text-[#00CFE8] transition-colors uppercase" onClick={() => setOpen(false)}>NOSOTROS</Link>
+            <Link href="/blog" className="py-2 text-[#0A2540] font-extrabold text-lg w-full text-center hover:text-[#00CFE8] transition-colors uppercase" onClick={() => setOpen(false)}>BLOG</Link>
             <a
               href="#contacto"
               className="py-2 text-[#0A2540] font-extrabold text-lg w-full text-center hover:text-[#00CFE8] transition-colors uppercase"
-              onClick={handleContactoClick}
+              onClick={e => { handleContactoClick(e); setOpen(false); }}
             >
               CONTACTO
             </a>

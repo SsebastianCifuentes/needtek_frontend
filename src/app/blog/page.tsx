@@ -20,6 +20,8 @@ type BlogPost = {
   _createdAt: string;
 };
 
+export const revalidate = 60; // ISR: Regenera cada 60 segundos
+
 export default async function BlogPage() {
   const posts: BlogPost[] = await getBlogPosts();
   return (

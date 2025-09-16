@@ -34,17 +34,23 @@ export default async function BlogPage() {
         {posts && posts.length > 0 ? (
           posts.map((post: BlogPost) => (
             <article key={post._id} className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 flex flex-col">
-              {post.mainImage && (
-                <div className="mb-4">
-                  <Image
-                    src={urlFor(post.mainImage).width(800).height(400).url()}
-                    alt={post.title}
-                    width={800}
-                    height={400}
-                    className="rounded w-full object-cover"
-                  />
-                </div>
-              )}
+              {post.mainImage && (() => {
+                const imageUrl = urlFor(post.mainImage).width(800).height(400).url();
+                if (imageUrl) {
+                  return (
+                    <div className="mb-4">
+                      <Image
+                        src={imageUrl}
+                        alt={post.title}
+                        width={800}
+                        height={400}
+                        className="rounded w-full object-cover"
+                      />
+                    </div>
+                  );
+                }
+                return null;
+              })()}
               <h2 className="text-xl font-bold mb-2 text-[#00CFE8]">{post.title}</h2>
               {post.author && (
                 <div className="text-sm text-gray-600 mb-2">Por {post.author}</div>

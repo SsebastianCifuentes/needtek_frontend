@@ -6,8 +6,8 @@ import Image from "next/image";
 export default async function BlogPage() {
   const posts = await getBlogPosts();
   return (
-    <main className="container mx-auto py-12 px-4 pt-24">
-      <h1 className="text-3xl md:text-4xl font-extrabold mb-8 text-center">Blog</h1>
+    <main className="w-full min-h-screen bg-[#F5F6F7] py-12 px-4 pt-24">
+      <h1 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-[#0A2540]">Blog</h1>
       <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-700 text-center">
         Explora tendencias, aprendizajes y casos sobre innovación, tecnología y transformación organizacional.
       </p>
@@ -26,7 +26,7 @@ export default async function BlogPage() {
                   />
                 </div>
               )}
-              <h2 className="text-xl font-bold mb-2 text-blue-700">{post.title}</h2>
+              <h2 className="text-xl font-bold mb-2 text-[#00CFE8]">{post.title}</h2>
               {post.author && (
                 <div className="text-sm text-gray-600 mb-2">Por {post.author}</div>
               )}

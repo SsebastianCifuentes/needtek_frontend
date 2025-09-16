@@ -2,17 +2,19 @@ import { getBlogPostBySlug } from "../../../lib/sanity";
 import { urlFor } from "../../../lib/imageUrl";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
-import type { TypedObject } from "@portabletext/types";
+import BackButton from "./BackButton";
 
 export const revalidate = 60;
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getBlogPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getBlogPostBySlug(slug);
   if (!post) {
     return <div className="text-center py-24 text-gray-500">No se encontró la noticia.</div>;
   }
   return (
-    <main className="w-full min-h-screen bg-[#F5F6F7] py-12 px-4 pt-24 flex flex-col items-center">
+    <main className="w-full min-h-screen bg-[#F5F6F7] py-12 px-4 pt-24 flex flex-col items-center relative">
+      <BackButton />
       <article className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 max-w-2xl w-full">
         {/* Título */}
   <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#0A2540] leading-tight">{post.title}</h1>

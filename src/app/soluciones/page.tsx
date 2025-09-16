@@ -1,12 +1,6 @@
 "use client";
 import Image from "next/image";
 
-const COLOR_BG_SOFT = "#F5F6F7";
-const COLOR_CYAN = "#00CFE8";
-const COLOR_CTA = "#FF6B35";
-const COLOR_ACCENT = "#2A2C2E";
-const COLOR_SUCCESS = "#00C46A";
-
 export default function SolucionesPage() {
   return (
     <main className="w-full min-h-screen bg-[#F5F6F7]">

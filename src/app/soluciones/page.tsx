@@ -9,7 +9,7 @@ export default function SolucionesPage() {
   <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-center text-[#0A2540] mb-4 md:mb-6 uppercase leading-tight md:leading-tight max-w-3xl mx-auto">Soluciones integrales para la transformación digital</h1>
   <p className="text-base sm:text-lg md:text-2xl text-center text-[#2A2C2E] mb-6 md:mb-10 max-w-xl mx-auto">Diseñamos estrategias a la medida de tu organización, integrando tecnología, cultura y modelos operativos para impulsar la innovación.</p>
         <div className="flex flex-col md:flex-row gap-4 mt-4 justify-center items-center w-full">
-          <a href="/contacto" className="bg-[#FF6B35] hover:bg-[#FF8C5A] text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-colors uppercase w-full md:w-auto mb-2 md:mb-0 text-center">Agenda una consultoría gratuita</a>
+          <a href="/contacto" className="bg-[#FF6B35] hover:bg-[#FF8C5A] text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-colors uppercase w-full md:w-auto mb-2 md:mb-0 text-center">Agenda una consultoría</a>
           <a href="/brochure.pdf" className="border-2 border-[#FF6B35] text-[#FF6B35] font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-colors uppercase w-full md:w-auto text-center" download>Descargar brochure</a>
         </div>
       </section>

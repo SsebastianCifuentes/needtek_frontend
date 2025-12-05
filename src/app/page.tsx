@@ -65,7 +65,7 @@ export default function Home() {
             className="inline-block bg-[#FF6B35] hover:bg-[#FF8C5A] text-white font-extrabold px-8 py-4 rounded-full text-lg shadow-lg transition-colors uppercase mb-12"
             onClick={handleScrollToContacto}
           >
-            Agenda una consultoría gratuita
+            Agenda una consultoría
           </a>
         </div>
       </section>

@@ -5,7 +5,7 @@ export default function ContactoPage() {
       <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
         {/* Título y subtítulo a la izquierda */}
         <div className="flex-1 mb-10 md:mb-0 flex flex-col justify-center items-start">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 text-left uppercase tracking-wide">Conversemos sobre tus desafíos tecnológicos</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 text-left uppercase tracking-wide">Conversemos sobre tus desafíos</h2>
           <p className="text-gray-200 mb-8 text-left text-lg">Déjanos tu mensaje y te responderemos lo antes posible.</p>
         </div>
         {/* Formulario a la derecha */}

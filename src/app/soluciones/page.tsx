@@ -7,7 +7,7 @@ export default function SolucionesPage() {
       {/* 1. HERO */}
       <section className="w-full flex flex-col items-center justify-center min-h-[80vh] py-24 px-4 bg-[#F5F6F7]">
   <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-center text-[#0A2540] mb-4 md:mb-6 uppercase leading-tight md:leading-tight max-w-3xl mx-auto">Soluciones integrales para la transformación digital</h1>
-  <p className="text-base sm:text-lg md:text-2xl text-center text-[#2A2C2E] mb-6 md:mb-10 max-w-xl mx-auto">Diseñamos estrategias a la medida de tu organización, integrando tecnología, cultura y modelos operativos para impulsar la innovación.</p>
+  <p className="text-base sm:text-lg md:text-2xl text-center text-[#2A2C2E] mb-6 md:mb-10 max-w-xl mx-auto">Diseñamos estrategias a la medida de tu organización, integrando tecnología, cultura y modelos operativos que mejoran la productividad e impulsar el crecimiento de tu empresa.</p>
         <div className="flex flex-col md:flex-row gap-4 mt-4 justify-center items-center w-full">
           <a href="/contacto" className="bg-[#FF6B35] hover:bg-[#FF8C5A] text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-colors uppercase w-full md:w-auto mb-2 md:mb-0 text-center">Agenda una consultoría</a>
           <a href="/brochure.pdf" className="border-2 border-[#FF6B35] text-[#FF6B35] font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-colors uppercase w-full md:w-auto text-center" download>Descargar brochure</a>
@@ -17,7 +17,7 @@ export default function SolucionesPage() {
       {/* 2. RESUMEN RÁPIDO */}
       <section className="w-full py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <p className="text-xl text-center text-[#2A2C2E] mb-10">Nuestras soluciones combinan diagnóstico estratégico, gestión tecnológica y rediseño operativo para generar resultados sostenibles.</p>
+          <p className="text-xl text-center text-[#2A2C2E] mb-10">Nuestras soluciones combinan diagnóstico estratégico, gestión tecnológica y rediseño de modelos de operación para generar resultados sostenibles.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Tarjeta 1 */}
             <div className="bg-[#F5F6F7] rounded-2xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-xl transition-shadow group">
@@ -25,7 +25,7 @@ export default function SolucionesPage() {
                 <Image src="/servicios/estrategia.png" alt="Estrategia" width={40} height={40} style={{filter: 'invert(62%) sepia(98%) saturate(747%) hue-rotate(153deg) brightness(98%) contrast(101%)'}} />
               </div>
               <h3 className="text-lg font-bold text-[#00CFE8] mb-2 uppercase group-hover:text-[#FF6B35] transition-colors">Estrategia y Cultura Organizacional</h3>
-              <p className="text-gray-700 text-sm">Alineamos propósito, liderazgo y procesos para que la tecnología funcione.</p>
+              <p className="text-gray-700 text-sm">Alineamos propósito, liderazgo y procesos para que la tecnología aporte valor.</p>
             </div>
             {/* Tarjeta 2 */}
             <div className="bg-[#F5F6F7] rounded-2xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-xl transition-shadow group">
@@ -58,7 +58,7 @@ export default function SolucionesPage() {
             <li>Fortalecimiento del liderazgo y la colaboración.</li>
             <li>Alineamiento entre estrategia y cultura organizacional.</li>
           </ul>
-          <div className="bg-[#E6EEF2] rounded-xl p-4 text-[#2A2C2E] font-semibold mb-4">Organización cohesionada, con liderazgo habilitado y capacidad de ejecución.</div>
+          <div className="bg-[#E6EEF2] rounded-xl p-4 text-[#2A2C2E] font-semibold mb-4">Organización cohesionada, con liderazgo y capacidad de ejecución.</div>
           <a href="/contacto" className="inline-block border-2 border-[#00CFE8] text-[#00CFE8] font-bold px-6 py-2 rounded-full text-sm transition-colors hover:bg-[#00CFE8] hover:text-white">Solicitar diagnóstico</a>
         </div>
       </section>
@@ -126,7 +126,7 @@ export default function SolucionesPage() {
             <div className="bg-[#F5F6F7] rounded-2xl p-8 flex flex-col items-center text-center shadow-md">
               <div className="w-14 h-14 bg-[#00CFE8] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">2</div>
               <h3 className="text-lg font-bold text-[#2A2C2E] mb-2 uppercase">Diseño</h3>
-              <p className="text-gray-700 text-sm">Solución integrada (estrategia, tech, people).</p>
+              <p className="text-gray-700 text-sm">Solución integrada (estrategia, tecnologías, personas).</p>
               <span className="text-xs text-[#00CFE8] mt-2">~2 semanas</span>
             </div>
             <div className="bg-[#F5F6F7] rounded-2xl p-8 flex flex-col items-center text-center shadow-md">

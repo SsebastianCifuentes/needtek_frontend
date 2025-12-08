@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="flex flex-col items-center justify-center">
         {/* Logo centrado */}
         <div className="mb-6">
-          <Image src="/logo/white/needtek_logo_it_white_removebg.png" alt="Needtek logo" width={320} height={106} style={{height: "auto"}} priority />
+          <Image src="/logo/white/needtek_logo_white_removebg.png" alt="Needtek logo" width={320} height={106} style={{height: "auto"}} priority />
         </div>
         {/* Línea divisoria */}
   <hr className="w-11/12 border-t border-[#F5F7FA] mb-8" />
